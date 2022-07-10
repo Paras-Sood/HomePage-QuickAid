@@ -10,13 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
         // update('google_api_calls',metrics.google_api_calls)
         update('alert_messages_sent',metrics.alert_messages_sent)
     })
+    var navLinks = document.getElementById("navLinks");
+    document.querySelector('#showMenu').addEventListener('click',()=>navLinks.style.right="0")
+    document.querySelector('#hideMenu').addEventListener('click',()=>navLinks.style.right="-200px")
 })
-
-var navLinks = document.getElementById("navLinks");
-
-function showMenu() {
-    navLinks.style.right = "0";
-}
-function hideMenu() {
-    navLinks.style.right = "-200px";
-}
