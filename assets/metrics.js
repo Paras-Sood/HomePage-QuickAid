@@ -3,11 +3,20 @@ function update(location_id,value){
     document.querySelector(`#${location_id}`).innerHTML=`${value} +`;
 }
 document.addEventListener('DOMContentLoaded',()=>{
-    fetch('http://shrouded-castle-52205.herokuapp.com/api/metrics/')
+    fetch('https://shrouded-castle-52205.herokuapp.com/api/metrics/')
     .then(response=>response.json())
     .then(metrics=>{
         update('total_api_calls',metrics.total_api_calls)
-        update('google_api_calls',metrics.google_api_calls)
+        // update('google_api_calls',metrics.google_api_calls)
         update('alert_messages_sent',metrics.alert_messages_sent)
     })
 })
+
+var navLinks = document.getElementById("navLinks");
+
+function showMenu() {
+    navLinks.style.right = "0";
+}
+function hideMenu() {
+    navLinks.style.right = "-200px";
+}

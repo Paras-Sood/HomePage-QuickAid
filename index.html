@@ -23,6 +23,21 @@
 <body>
 	<div class="Container">
 		<nav class="navbar">
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+				<ul>
+					<li> <a href="#QuickAid">QuickAid</a></li>
+					<li> <a href="#Problem">Problem Statement</a></li>
+					<li> <a href="#Our Solution">Our Solution</a></li>
+					<li> <a href="#App Snapshots">App Snapshots</a></li>
+					<li> <a href="#Stats">Stats</a></li>
+					<li> <a href="#Tech Stack">Tech Stack</a></li>
+					<li> <a href="#Our Team">Our Team</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+		<!-- <nav class="navbar">
 			<ul>
 				<li> <a href="#QuickAid">QuickAid</a></li>
 				<li> <a href="#Problem">Problem Statement</a></li>
@@ -32,7 +47,7 @@
 				<li> <a href="#Tech Stack">Tech Stack</a></li>
 				<li> <a href="#Our Team">Our Team</a></li>
 			</ul>
-		</nav>
+		</nav> -->
 		<section id="QuickAid" class=" one" style="padding-top: 100px;">
 			<header class="app__header container">
 				<div class="app__logo-wrapper"> <img class="app__logo" src="content/image/logo.gif" alt="QuickAid">
@@ -136,55 +151,44 @@
 				</div>
 			</section>
 		</section>
-		<section id="Stats" class="five container" style="padding-top: 100px;">
+		<section id="Stats" class="five container" style="padding-top: 100px; font-size: large;">
 			<div class="container-fluid container"
 				style="background-image: linear-gradient(310deg, rgb(5, 31, 46), rgb(9, 54, 73) 51%, rgb(0, 169, 136)); color: white; padding: 50px; border-radius: 25px;">
 				<div class="stats container">
 					<h1 class="stats__heading" style="text-align: center;padding: 50px">What numbers speak ?</h1>
 					<div class="stat-divs-wrapper row" style="display: flex;justify-content: space-around;">
 						<div class="stats__each-stat col-sm-12 col-lg"
-							style="display: flex;flex-direction: column;padding: 50px;">
-							<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+							style="display: flex;flex-direction: column;padding: 50px;text-align: center;align-items: center;">
+							<!-- <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
 								height="30" width="30" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63l-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z">
 								</path>
-							</svg>
+							</svg> -->
+							<i class="fa fa-ambulance" aria-hidden="true" style="font-size: 25px;"></i>
 							<span class="stats__each-stat__bold-heading">
-
 								<span id="total_api_calls">0</span>
 							</span>
-							<span class="stats__each-stat__light-subHeading " style="color: white;">Total API
-								Calls</span>
+							<span class="stats__each-stat__light-subHeading " style="color: white;">ACCIDENTS REPORTED</span>
 						</div>
-						<div class="stats__each-stat col-sm-12 col-lg"
-							style="display: flex;flex-direction: column;padding: 50px;">
-							<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
-								height="30" width="30" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M186.12 343.34c-9.65 9.65-9.65 25.29 0 34.94 9.65 9.65 25.29 9.65 34.94 0L378.24 221.1c19.29-19.29 50.57-19.29 69.86 0s19.29 50.57 0 69.86L293.95 445.1c19.27 19.29 50.53 19.31 69.82.04l.04-.04 119.25-119.24c38.59-38.59 38.59-101.14 0-139.72-38.59-38.59-101.15-38.59-139.72 0l-157.22 157.2zm244.53-104.8c-9.65-9.65-25.29-9.65-34.93 0l-157.2 157.18c-19.27 19.29-50.53 19.31-69.82.05l-.05-.05c-9.64-9.64-25.27-9.65-34.92-.01l-.01.01c-9.65 9.64-9.66 25.28-.02 34.93l.02.02c38.58 38.57 101.14 38.57 139.72 0l157.2-157.2c9.65-9.65 9.65-25.29.01-34.93zm-261.99 87.33l157.18-157.18c9.64-9.65 9.64-25.29 0-34.94-9.64-9.64-25.27-9.64-34.91 0L133.72 290.93c-19.28 19.29-50.56 19.3-69.85.01l-.01-.01c-19.29-19.28-19.31-50.54-.03-69.84l.03-.03L218.03 66.89c-19.28-19.29-50.55-19.3-69.85-.02l-.02.02L28.93 186.14c-38.58 38.59-38.58 101.14 0 139.72 38.6 38.59 101.13 38.59 139.73.01zm-87.33-52.4c9.64 9.64 25.27 9.64 34.91 0l157.21-157.19c19.28-19.29 50.55-19.3 69.84-.02l.02.02c9.65 9.65 25.29 9.65 34.93 0 9.65-9.65 9.65-25.29 0-34.93-38.59-38.59-101.13-38.59-139.72 0L81.33 238.54c-9.65 9.64-9.65 25.28-.01 34.93h.01z">
-								</path>
-							</svg>
+						<!-- <div class="stats__each-stat col-sm-12 col-lg"
+							style="display: flex;flex-direction: column;padding: 50px;text-align: center;align-items: center;">
+							<i class="fa fa-map-marker" aria-hidden="true" style="font-size: 25px;"></i>
 							<span class="stats__each-stat__bold-heading">
 								<span id="google_api_calls">0</span>
 							</span>
-							<span class="stats__each-stat__light-subHeading" style="color: white;">Google API
-								Calls</span>
-						</div>
+							<span class="stats__each-stat__light-subHeading" style="color: white;">GOOGLE API
+								CALLS</span>
+						</div> -->
 						<div class="stats__each-stat col-sm-12 col-lg"
-							style="display: flex;flex-direction: column;padding: 50px;">
-							<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-								height="30" width="30" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M18.404,2.998c-0.757-0.754-2.077-0.751-2.828,0.005l-1.784,1.791L11.586,7H7C6.579,7,6.204,7.263,6.061,7.658l-4,11 c-0.133,0.365-0.042,0.774,0.232,1.049l2,2C4.483,21.898,4.739,22,5,22c0.114,0,0.23-0.02,0.342-0.061l11-4 C16.737,17.796,17,17.421,17,17v-4.586l2.207-2.207c0,0,0,0,0-0.001c0.001,0,0.001,0,0.001,0L21,8.409 c0.378-0.378,0.586-0.881,0.585-1.415c0-0.535-0.209-1.038-0.588-1.415L18.404,2.998z M15.293,11.293 C15.105,11.48,15,11.734,15,12v4.3l-9.249,3.363l4.671-4.671C10.448,14.993,10.474,15,10.5,15c0.828,0,1.5-0.672,1.5-1.5 S11.328,12,10.5,12S9,12.672,9,13.5c0,0.026,0.007,0.052,0.008,0.078l-4.671,4.671L7.7,9H12c0.266,0,0.52-0.105,0.707-0.293 L14.5,6.914L17.086,9.5L15.293,11.293z M18.499,8.085l-2.586-2.586l1.079-1.084l2.593,2.581L18.499,8.085z">
-								</path>
-							</svg>
+							style="display: flex;flex-direction: column;padding: 50px;text-align: center;align-items: center;">
+							<i class="fa fa-envelope" aria-hidden="true" style="font-size: 25px;"></i>
 							<span class="stats__each-stat__bold-heading">
 								<span id="alert_messages_sent">0</span>
 							</span>
-							<span class="stats__each-stat__light-subHeading" style="color: white;">Alert
-								Messages
-								sent</span>
+							<span class="stats__each-stat__light-subHeading" style="color: white;">ALERT
+								MESSAGES
+								SENT</span>
 						</div>
 					</div>
 				</div>
@@ -216,7 +220,7 @@
 					</div>
 				</div>
 				<!-- //Row 2 -->
-				<h5 class="Our_Solution-title" style="padding: 20px;">Backend End:</h5>
+				<h5 class="Our_Solution-title" style="padding: 20px;">Backend:</h5>
 				<div class="row">
 					<div class="column">
 						<div class="card">
@@ -278,6 +282,7 @@
 						</div>
 						<div class="team-content">
 							<h3 class="name">Paras Sood</h3>
+							<p class="person_description">Backend Developer</p>
 						</div>
 						<ul class="social">
 							<li><a href="https://github.com/Paras-Sood" class="fa fa-github" aria-hidden="true"></a>
@@ -296,7 +301,7 @@
 						</div>
 						<div class="team-content">
 							<h3 class="name">Navdeep Singh</h3>
-
+							<p class="person_description">Your Role Here</p>
 						</div>
 						<ul class="social">
 
@@ -316,6 +321,7 @@
 						</div>
 						<div class="team-content">
 							<h3 class="name">Banaj Bedi</h3>
+							<p class="person_description">Your Role Here</p>
 
 						</div>
 						<ul class="social">
@@ -334,6 +340,7 @@
 						</div>
 						<div class="team-content">
 							<h3 class="name">Rachit Narang</h3>
+							<p class="person_description">Your Role Here</p>
 
 						</div>
 						<ul class="social">
