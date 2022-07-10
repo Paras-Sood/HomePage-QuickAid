@@ -543,7 +543,7 @@ html[dir=rtl] .app__logo-wrapper {
 }
 
 
-@media screen and (max-width: 600px) {
+.screen and (max-width: 600px) {
   .column {
     width: 100%;
     display: block;
@@ -553,6 +553,7 @@ html[dir=rtl] .app__logo-wrapper {
 }
 .navbar{
   z-index: 9999;
+  position: relative;
 }
 nav {
   display: flex;
