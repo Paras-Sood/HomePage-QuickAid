@@ -215,7 +215,7 @@ html[dir=rtl] .app__logo-wrapper {
 
 @media (max-width: 768px) {
   .app__screenshots-list {
-    padding: 32px;
+    padding: 20px;
     width: 800px;
     min-width: 250px;
     /* min-width: 250px; */
@@ -240,7 +240,8 @@ html[dir=rtl] .app__logo-wrapper {
 
 .app__screenshots-wrapper {
   overflow-y: auto;
-  min-width: 250px;
+  min-width: 300px;
+  padding: auto;
 }
 
 .app__buttons {
