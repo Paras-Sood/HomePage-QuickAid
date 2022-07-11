@@ -339,6 +339,7 @@ html[dir=rtl] .app__logo-wrapper {
 }
 
 .footer {
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 16px 0;
   font-size: var(--font-xs) !important;
 }
@@ -348,7 +349,7 @@ html[dir=rtl] .app__logo-wrapper {
 }
 
 .footer__container {
-  color: #65638f;
+  color: white;
   display: flex;
   width: 100%;
   justify-content: space-between;
