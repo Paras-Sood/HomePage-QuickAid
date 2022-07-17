@@ -3,6 +3,9 @@
   overflow-y: scroll;
   height: 100vh;
 }
+/* html{
+  scroll-behavior: smooth;
+} */
 
 .navbar {
   position: absolute;
@@ -33,8 +36,8 @@
   color: aliceblue;
 }
 
+
 .navbar ul li a:hover {
   text-decoration: none;
-  text-transform: uppercase;
-  color: aliceblue;
+  color: #46dacb;
 }
