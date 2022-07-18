@@ -603,7 +603,7 @@ html[dir=rtl] .app__logo-wrapper {
   float: left;
   width: 25%;
   padding: 0 10px;
-  border-radius: 2.5rem;
+  /* border-radius: 2.5rem; */
 }
 
 /* Remove extra left and right margins, due to padding in columns */
@@ -638,7 +638,7 @@ html[dir=rtl] .app__logo-wrapper {
 }
 
 
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 600px) {
   .column {
     min-width: 35%;
     display: block;
