@@ -13,7 +13,8 @@ function metrics(){
     fetch('https://shrouded-castle-52205.herokuapp.com/api/metrics/')
     .then(response=>response.json())
     .then(metrics=>{
-    
+        document.querySelector(`#total_api_calls`).innerHTML="0"
+        document.querySelector(`#alert_messages_sent`).innerHTML="0"
         updateVal('total_api_calls',metrics.total_api_calls)
         // // update('google_api_calls',metrics.google_api_calls)
         updateVal('alert_messages_sent',metrics.alert_messages_sent)
